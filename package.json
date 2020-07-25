@@ -1,0 +1,38 @@
+{
+  "name": "my-recommendation-lambda",
+  "version": "1.0.0",
+  "description": "This lambda handles request to DDB \"my-recommendation\" table",
+  "main": "./src/app.js",
+  "repository": "https://github.com/shanishiri/my-recommendation-lambda.git",
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "license": "",
+  "author": "",
+  "dependencies": {
+    "aws-sdk": "^2.596.0"
+  },
+  "scripts": {
+    "test": "jest --coverage --verbose",
+    "build": "webpack --progress --colors --mode=development",
+    "build-prod": "webpack --mode=production",
+    "local-run": "jest --colors --verbose --runTestsByPath ./src/__tests__/local-run/localRun.test.js --detectOpenHandles"
+  },
+  "devDependencies": {
+    "jest": "^25.5.2",
+    "jest-extended": "^0.11.2",
+    "lambda-tester": "^4.0.1",
+    "@jurijzahn8019/aws-promise-jest-mock": "^2.1.5"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "jest-extended"
+    ],
+    "modulePathIgnorePatterns": [
+      "local-run",
+      "mocks",
+      "utils"
+    ]
+  }
+}
