@@ -10,7 +10,7 @@
   "license": "",
   "author": "",
   "dependencies": {
-    "aws-sdk": "^2.596.0"
+    "aws-sdk": "^2.814.0"
   },
   "scripts": {
     "test": "jest --coverage --verbose",
